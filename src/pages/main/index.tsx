@@ -19,7 +19,6 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Menu */}
         <div className="w-full max-w-xs flex flex-col gap-3">
 
           <button className="py-3 border border-white/20 opacity-60 hover:opacity-100 hover:border-white transition">

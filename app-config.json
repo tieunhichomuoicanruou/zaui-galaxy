@@ -1,6 +1,6 @@
 {
   "app": {
-    "title": "zaui-lucky-wheel",
+    "title": "zaui-galaxy",
     "textColor": {
       "light": "black",
       "dark": "white"
@@ -11,7 +11,7 @@
     "hideAndroidBottomNavigationBar": false
   },
   "template": {
-    "name": "zaui-lucky-wheel"
+    "name": "zaui-galaxy"
   },
   "listCSS": [],
   "listSyncJS": [],

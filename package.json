@@ -1,8 +1,7 @@
 {
-  "name": "zaui-lucky-wheel",
+  "name": "zaui-galaxy",
   "private": true,
   "version": "1.0.0",
-  "description": "ZaUI Lucky Wheel là bộ giao diện mẫu (Template) giúp xây dựng các chiến dịch Vòng quay may mắn (Lucky Wheel/Slot Machine) trên Zalo Mini App nhằm thu hút người dùng và tăng tương tác.",
   "repository": "",
   "license": "UNLICENSED",
   "browserslist": [
@@ -20,12 +19,10 @@
     "deploy": "zmp deploy"
   },
   "dependencies": {
-    "@tanstack/react-form": "^1.27.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tailwind-merge": "^3.4.0",
     "three": "^0.183.2",
-    "valibot": "^1.2.0",
     "zmp-sdk": "latest",
     "zmp-ui": "latest",
     "zustand": "^5.0.9"

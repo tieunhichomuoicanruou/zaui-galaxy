@@ -20,7 +20,7 @@ export class Interaction {
     ) {
         this.raycaster = new THREE.Raycaster();
         this.mouse = new THREE.Vector2(-1, -1);
-        this.raycaster.params.Points!.threshold = 1.0;
+        this.raycaster.params.Points!.threshold = 0.5;
 
         container.addEventListener("mousemove", (e) => this.onMouseMove(e));
     }

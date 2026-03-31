@@ -19,14 +19,15 @@ if (!window.APP_CONFIG) {
 }
 
 declare global {
-  interface Window {}
+  interface Window { }
 }
 
 const root = createRoot(document.getElementById("app")!);
+const SafeSnackbarProvider = SnackbarProvider as any;
 root.render(
   <React.StrictMode>
-    <SnackbarProvider>
+    <SafeSnackbarProvider>
       <MiniApp />
-    </SnackbarProvider>
+    </SafeSnackbarProvider>
   </React.StrictMode>
 );

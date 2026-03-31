@@ -1,8 +1,8 @@
 export const CAMERA_CONFIG = {
-    FOV: 75,
+    FOV: 50,
     NEAR: 1,
     FAR: 5000,
-    POSITION: { x: 0, y: 0, z: 255 },
+    POSITION: { x: 0, y: 0, z: 300 },
     CONTROLS: {
         ENABLE_DAMPING: true,
         DAMPING_FACTOR: 0.05,

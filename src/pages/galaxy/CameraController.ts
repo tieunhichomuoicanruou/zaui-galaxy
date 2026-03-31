@@ -13,7 +13,7 @@ export class CameraController {
         this.camera = new THREE.PerspectiveCamera(
             CAMERA_CONFIG.FOV,
             window.innerWidth / window.innerHeight,
-            0.01, // Rất quan trọng: Near cực thấp để nhìn từ (0,0,0)
+            0.01,
             CAMERA_CONFIG.FAR
         );
 
@@ -29,14 +29,12 @@ export class CameraController {
         }
     }
 
-    // Chế độ nhìn từ tâm (Inside View)
     public setInsideView(active: boolean): void {
         if (!this.controls) return;
 
         if (active) {
-            // Đặt camera ở (0, 0, 0.1) để OrbitControls vẫn có hướng quay
             this.camera.position.set(0, 0, 0.1);
-            this.controls.target.set(0, 0, 0.2); // Nhìn về phía trước một chút
+            this.controls.target.set(0, 0, 0.2);
         } else {
             this.resetPosition();
         }
@@ -50,7 +48,6 @@ export class CameraController {
         this.controls.enableDamping = c.ENABLE_DAMPING;
         this.controls.dampingFactor = c.DAMPING_FACTOR;
 
-        // Cho phép người dùng tự zoom vào sát tâm
         this.controls.minDistance = 0;
         this.controls.maxDistance = c.MAX_DISTANCE;
     }

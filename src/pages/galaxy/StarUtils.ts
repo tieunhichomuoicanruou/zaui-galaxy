@@ -7,10 +7,11 @@ interface Palette {
 }
 
 const PALETTES: Palette[] = [
-    { base: new THREE.Color("#ffffff"), alt: new THREE.Color("#eeeeee"), weight: 0.4 },
-    { base: new THREE.Color("#dddddd"), alt: new THREE.Color("#bbbbbb"), weight: 0.3 },
-    { base: new THREE.Color("#aaaaaa"), alt: new THREE.Color("#888888"), weight: 0.2 },
-    { base: new THREE.Color("#666666"), alt: new THREE.Color("#333333"), weight: 0.1 }
+    { base: new THREE.Color("#ffffff"), alt: new THREE.Color("#e0e0e0"), weight: 0.40 },
+    { base: new THREE.Color("#cccccc"), alt: new THREE.Color("#b0b0b0"), weight: 0.30 },
+    { base: new THREE.Color("#888888"), alt: new THREE.Color("#666666"), weight: 0.20 },
+    { base: new THREE.Color("#444444"), alt: new THREE.Color("#333333"), weight: 0.08 },
+    { base: new THREE.Color("#111111"), alt: new THREE.Color("#000000"), weight: 0.02 }
 ];
 
 const _tempColor = new THREE.Color();
@@ -29,7 +30,6 @@ export const getSymbolicColor = (): THREE.Color => {
     }
 
     _tempColor.copy(selected.base);
-    // .clone() là cần thiết ở đây vì chúng ta đang dùng chung _tempColor
     return _tempColor.lerp(selected.alt, Math.random()).clone();
 };
 
@@ -52,7 +52,7 @@ export const getRandomSpherePoint = (radius: number, target: THREE.Vector3 = new
 
 export const getStarMass = (): number => {
     const rand = Math.random();
-    if (rand < 0.8) return 0.5 + Math.random() * 0.5;   // Sao nhỏ
-    if (rand < 0.95) return 1.5 + Math.random() * 1.5; // Sao vừa
-    return 4.0 + Math.random() * 6.0;                  // Sao khổng lồ
+    if (rand < 0.8) return 0.5 + Math.random() * 0.5;
+    if (rand < 0.95) return 1.5 + Math.random() * 1.5;
+    return 4.0 + Math.random() * 6.0;
 };

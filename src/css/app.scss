@@ -20,3 +20,30 @@
 .zaui-header::after {
   display: none;
 }
+
+.zoom-effect {
+  transform: scale(8);
+  /* Phóng to cực đại */
+  filter: blur(10px);
+  /* Làm nhòe để tạo cảm giác tốc độ */
+  opacity: 0;
+  /* Mờ dần */
+  pointer-events: none;
+  /* Ngăn tương tác khi đang chuyển cảnh */
+}
+
+@keyframes fadeInGalaxy {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.galaxy-container {
+  animation: fadeInGalaxy 0.8s ease-out forwards;
+}
